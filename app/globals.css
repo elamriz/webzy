@@ -3,15 +3,21 @@
 @tailwind utilities;
 /* Custom Global Styles */
 
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+p, span, a, li {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
 
  
-  /* styles/globals.css */
-
-  /* styles/globals.css */
 /* Scrollbar - works for both themes now */
 ::-webkit-scrollbar {
   width: 8px;

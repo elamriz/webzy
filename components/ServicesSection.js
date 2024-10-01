@@ -149,7 +149,7 @@ const servicesData = [
       'Fully optimized, mobile-friendly, and designed to convert your visitors into customers.',
     icon: FaLaptopCode,
     process: ['Discovery & Planning', 'Wireframes & Design', 'Development & Testing', 'Launch & Support'],
-    stack: ['React', 'Next.js', 'Node.js', 'MongoDB'],
+    stack: ['React', 'Next.js', 'PHP', 'MySQL','MongoDB','HTML','CSS'],
   },
   {
     title: 'App Development',
