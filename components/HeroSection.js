@@ -1,7 +1,6 @@
-// components/HeroSection.js
 'use client';
 
-import { useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim'; // Use the slim version
 
@@ -10,6 +9,30 @@ export default function HeroSection() {
     // Loads the slim version of tsparticles
     await loadSlim(engine);
   }, []);
+
+  // Load Calendly script dynamically
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.head.removeChild(link);
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  // Handle Calendly popup on button click
+  const handleCalendlyClick = () => {
+    Calendly.initPopupWidget({ url: 'https://calendly.com/elamri-zakariyae/let-s-discuss-your-project-15-min-call' });
+    return false;
+  };
 
   return (
     <section className="relative bg-black dark:bg-white text-white dark:text-black py-32 overflow-hidden">
@@ -82,16 +105,18 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="relative z-10 text-center px-6">
         <h1 className="text-6xl font-extrabold">
-          Welcome to <span className="text-purple-blue dark:text-salmon">Prodream</span>
+          Welcome to <span className="text-purple-blue dark:text-salmon">Devzy</span>
         </h1>
         <p className="mt-8 text-2xl">
           Bringing your dreams to life with innovative design and cutting-edge technology. Prodream makes your vision a reality.
         </p>
-        <button className="mt-12 px-12 py-4 bg-salmon text-black dark:bg-purple-blue dark:text-white rounded-full text-xl transition duration-300
-  hover:bg-purple-blue hover:text-white dark:hover:bg-salmon dark:hover:text-black">
-  Get Started
-</button>
-
+        <button
+          className="mt-12 px-12 py-4 bg-salmon text-black dark:bg-purple-blue dark:text-white rounded-full text-xl transition duration-300
+            hover:bg-purple-blue hover:text-white dark:hover:bg-salmon dark:hover:text-black"
+          onClick={handleCalendlyClick}
+        >
+          Get Started with a 15-Min Call
+        </button>
       </div>
     </section>
   );

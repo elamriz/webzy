@@ -162,17 +162,7 @@ const servicesData = [
     process: ['Concept & Strategy', 'UI/UX Design', 'Development & Testing', 'Launch & Maintenance'],
     stack: ['React Native', 'Flutter', 'Swift', 'Kotlin'],
   },
-  {
-    title: 'UX/UI Design',
-    price: '299€',
-    description:
-      'We design visually stunning and user-friendly interfaces.',
-    details:
-      'Our designs focus on providing the best user experience across devices.',
-    icon: FaPalette,
-    process: ['User Research', 'Wireframes & Prototyping', 'Design & Testing', 'Final Design Handoff'],
-    stack: ['Figma', 'Sketch', 'Adobe XD', 'InVision'],
-  },
+ 
   {
     title: 'E-commerce Solutions',
     price: '899€',

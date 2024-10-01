@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between px-6">
         {/* Logo */}
         <div className="text-4xl font-bold text-salmon dark:text-purple-blue">
-          <Link href="/">Prodream</Link>
+          <Link href="/">Devzy</Link>
         </div>
 
         {/* Theme Toggle Button (outside the hamburger menu) */}

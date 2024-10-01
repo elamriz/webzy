@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Footer Left: Company Info */}
           <div className="text-center md:text-left text-xl text-gray-400 dark:text-gray-600">
-            &copy; {new Date().getFullYear()} Prodream. All rights reserved.
+            &copy; {new Date().getFullYear()} Devzy. All rights reserved.
           </div>
 
           {/* Footer Links */}
