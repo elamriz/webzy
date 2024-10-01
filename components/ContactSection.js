@@ -28,7 +28,7 @@ export default function ContactSection() {
           Get in <span className="text-purple-blue dark:text-salmon">Touch</span>
         </h2>
         <p className="mt-8 text-xl text-center text-gray-400 dark:text-gray-600">
-          Have a project in mind? We'd love to hear from you.
+         Have a project in mind? We&apos;d love to hear from you.
         </p>
         <div className="mt-16 max-w-2xl mx-auto">
           <form className="space-y-8" onSubmit={handleSubmit}>
